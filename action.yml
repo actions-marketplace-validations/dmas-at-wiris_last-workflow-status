@@ -1,5 +1,5 @@
-name: 'Get status of last workflow'
-description: 'Get conclusion(success, failure) of last workflow run on current branch.'
+name: 'Get status of last workflow execution'
+description: 'Get status of last workflow run on current branch.'
 branding:
   icon: 'arrow-left'
   color: 'yellow'
@@ -10,7 +10,7 @@ inputs:
     required: true
 outputs:
   last_status:
-    description: "`success|failure`"
+    description: "Status from previous execution of this GitHub Action workflow"
     value: ${{ steps.last_status.outputs.last_status }}
 runs:
   using: "composite"
